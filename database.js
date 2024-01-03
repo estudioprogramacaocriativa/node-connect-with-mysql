@@ -15,7 +15,7 @@ connection.connect((error) => {
   }
 });
 
-connection.query('INSERT INTO users (name) VALUES (?)', ['Brendo'], (err, result) => {
+connection.query('INSERT INTO users (name) VALUES (?)', ['Caroline'], (err, result) => {
   if (err) {
     console.log('Error inserting: ', err);
   } else {

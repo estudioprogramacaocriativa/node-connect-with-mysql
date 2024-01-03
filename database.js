@@ -15,6 +15,14 @@ connection.connect((error) => {
   }
 });
 
+connection.query('INSERT INTO users (name) VALUES (?)', ['Brendo'], (err, result) => {
+  if (err) {
+    console.log('Error inserting: ', err);
+  } else {
+    console.log('Successfully inserted: ', result);
+  }
+});
+
 connection.query(
   'SELECT * FROM `users`',
   function(err, results, fields) {
